@@ -1,0 +1,153 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本网页提供Xshell和Xftp免费个人版的官网下载地址">
+    <meta name="keywords" content="Xshell，Xshell5下载，Xshell5官网下载，Xshell5免费版，Xshell5个人版，Xftp，Xftp免费版下载，Xshell免费版下载，netsarang" />
+    <title>Xshell / Xftp 家庭学生个人免费版官网下载</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://ws2.sinaimg.cn/large/7efa749fgy1fw0vqmj8vwj200g00g0gm.jpg" />
+    <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=Raleway:200" />
+    <link href="https://lib.baomitu.com/pure/1.0.0/pure-min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- 统计代码 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fd8e8310d355b9a394ad2448420498b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130580298-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130580298-1');
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <h1>Xshell / Xftp 官网下载</h1>
+            <h2>支持Xshell、Xftp、Xshell Plus、Xmanager Power Suite（HOME/SCHOOL USER）各版本下载, 源自netsarang官网！</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a target="_blank" href="https://www.woytu.com#readmeTop">资源站</a>
+                        </td>
+                        <td>
+                            <a target="_blank" href="https://book.woytu.com">免费小说</a>
+                        </td>
+                        <td>
+                            <a target="_blank" href="https://woetu.com">WeChat小程序</a>
+                        </td>
+                        <td>
+                            <a target="_blank" href="https://www.bajins.com">导航站</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="content">
+         	<p><b>官方所有下载：</b><a target="_blank" href="https://www.netsarang.com/zh/all-downloads">https://www.netsarang.com/zh/all-downloads</a></p>
+            <p><b>安装方式：</b><a target="_blank" href="https://file.woytu.com/?dir=DeveloperTool/shell#Xshell">https://file.woytu.com/?dir=DeveloperTool/shell#Xshell</a></p>
+            <form class="pure-form pure-form-stacked">
+                <fieldset>
+                    <label for="token"><b>TOKEN:</b></label>
+                    <input id="token" type="text" class="pure-input-1" placeholder="token" value="">
+                    <span class="pure-form-message">该TOKEN将于2019年4月6日过期，如过期发邮件到admin@woytu.com通知博主，鄙视盗用本页源码的。</span>
+                    <label for="app"><b>软件:</b></label>
+                    <select class="pure-input-1" id="app" onchange="changeApp()">
+                        <option value="xshp" selected>Xshell Plus</option>
+                        <option value="xme">Xmanager Power Suite</option>
+                        <option value="xsh">Xshell</option>
+                        <option value="xfp">Xftp</option>
+                    </select>
+                    <label for="version"><b>版本:</b></label>
+                    <select class="pure-input-1" id="version" onchange="changeApp()">
+                        <option value="1">1.x</option>
+                        <option value="2">2.x</option>
+                        <option value="3">3.x</option>
+                        <option value="4">4.x</option>
+                        <option value="5">5.x</option>
+                        <option value="6" selected>6.x (目前最新版本)</option>
+                    </select>
+                    <a class="pure-button pure-button-primary pure-input-1" onclick="doit()">点击前往下载</a>
+                    <span class="pure-form-message">如果打开下载页面没有自动下载软件，请点击[begin downloading]链接手动下载</span>
+                </fieldset>
+                <a class="button-secondary pure-button pure-input-rounded pure-u-1 a-active" target="_blank" href="https://xshellkey.woytu.com">激活方式</a>
+            </form>
+
+        </div>
+        <div class="footer">
+            <div class="legal pure-g">
+                <div class="pure-u-1 u-sm-1-2">
+                    <p class="legal-license">
+                        This site is built with using <a href="https://www.purecss.cn" target="_black">Pure</a> v1.0.0
+                    </p>
+                </div>
+                <div class="pure-u-1 u-sm-1-2">
+                    <p class="legal-copyright">
+                        本网页所有代码版权归 <a href="https://woytu.com" target="_black">woytu.com</a> 所有。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function doit() {
+            var d = function(id) {
+                return document.getElementById(id).value
+            };
+            // var uri = "http://www.netsarang.com/download/down_" + d("app") + d("version") + ".html?token=" + d("token");
+            var uri = "https://www.netsarang.com/zh/downloading/?token=" + d("token");
+            var win = window.open(uri);
+            if (win == null) {
+                alert('新窗口看起来是被一个弹出窗口拦截程序所阻挡。 如果想打开新窗口，我们建议您将本站点加入到这个拦截程序设定的允许弹出名单中。有的弹出窗口拦截程序允许在长按Ctrl键时可以打开新窗口。');
+            }
+        }
+        window.onload = function() {
+            var app = document.getElementById("app").value;
+            var version = document.getElementById("version").value;
+            if (app == "xshp" && version == 6) {
+                var token = document.getElementById("token");
+                token.value = "MTN0LTcwSXVHV1BZZTJ1c3JkWmlpZ0B4dko1OFZqVHUxc1RYc0U3S0RiSlhR";
+            }
+        }
+
+        function changeApp() {
+            // var app = document.getElementById("app");
+            // var index = app.selectedIndex; // 选中索引
+            // var text = app.options[index].text; // 选中文本
+            // var value = app.options[index].value; // 选中值
+            // var appValue = document.getElementById("app").value;
+            var app = document.getElementById("app").value;
+            var version = document.getElementById("version").value;
+            var token = document.getElementById("token");
+            if (app == "xshp" && version == 6) {
+                token.value = "MTN0LTcwSXVHV1BZZTJ1c3JkWmlpZ0B4dko1OFZqVHUxc1RYc0U3S0RiSlhR";
+            } else if (app == "xme" && version == 6) {
+                token.value = "QTBQX3ZXZDdrS3NHZnZJbWY5R2tBUUB4dko1OFZqVHUxc1RYc0U3S0RiSlhR";
+            } else if (app == "xsh" && version == 6) {
+                token.value = "NEZXRXlpbU9yYjg2Q1RZTThRendmd0B4dko1OFZqVHUxc1RYc0U3S0RiSlhR";
+            } else if (app == "xfp" && version == 6) {
+                token.value = "ZkpLcS1VcjB2RjdEUU9IT01UQmQ2d0B4dko1OFZqVHUxc1RYc0U3S0RiSlhR";
+            } else {
+                token.value = ""
+            }
+        }
+    </script>
+
+</body>
+
+</html>
